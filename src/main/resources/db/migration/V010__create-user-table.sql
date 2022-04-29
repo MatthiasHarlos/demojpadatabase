@@ -1,0 +1,5 @@
+CREATE TABLE USER (
+    ID BIGSERIAL PRIMARY KEY,
+    user_name VARCHAR(255) NOT NULL,
+    password_encoded VARCHAR(255) NOT NULL
+);
