@@ -1,5 +1,9 @@
 package com.newenergycodes.demojpadatabase.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +24,7 @@ public class User {
     private String passwordEncoded;
 
     @OneToMany(mappedBy = "user")
+    @JsonBackReference
     private List<Attendance> attendances = new ArrayList<>();
 
     public Long getId() {
