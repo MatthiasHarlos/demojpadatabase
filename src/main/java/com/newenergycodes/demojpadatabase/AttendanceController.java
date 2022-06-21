@@ -45,7 +45,6 @@ public class AttendanceController {
                     HttpStatus.NOT_FOUND);
         }
         newAttendance.setUser(userRepository.getById(createAttendance.getUserId()));
-       // newAttendance.setDate(LocalDateTime.createAttendance.getDate());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
          newAttendance.setDate(LocalDateTime.parse(createAttendance.getDate(), formatter));
         Attendance savedAttendance = attendanceRepository.save(newAttendance);
