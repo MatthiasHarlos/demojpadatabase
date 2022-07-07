@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useLogInCheck = () => {
+export function useLogInCheck() {
    /* const [isLoggedIn, setLoggedIn] = useState(false);
 
     useEffect(() => {
@@ -16,5 +16,5 @@ export const useLogInCheck = () => {
         return false;
     }
 
-    return localStorage.getItem("token");
+    return true;
 }
